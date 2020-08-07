@@ -51,9 +51,9 @@ jobs:
         find . -name '*.cn.md' | xargs sed -i -n '/+++/,$ p' 
         find . -name '*.cn.md' | xargs sed -i '1d' 
         echo install svg
-        sudo rm -rf /usr/local/lib/node_modules/svgexport
-        npm uninstall svgexport -g
-        npm install --unsafe-perm --ignore-scripts -g svgexport
+        echo sudo rm -rf /usr/local/lib/node_modules/svgexport
+        echo npm uninstall svgexport -g
+        echo npm install --unsafe-perm --ignore-scripts -g svgexport
         echo gitbook generate
         gitbook pdf
         cd ..
