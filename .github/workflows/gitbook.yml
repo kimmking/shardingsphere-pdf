@@ -50,7 +50,8 @@ jobs:
         find . -name '*.cn.md' | xargs sed -i '1d' 
         find . -name '*.cn.md' | xargs sed -i -n '/+++/,$ p' 
         find . -name '*.cn.md' | xargs sed -i '1d' 
-        ls -al overview/_index.cn.md
+        echo install svg and generate
+        npm install svgexport -g
         gitbook pdf
         cd ..
         rm -rf *.pdf
