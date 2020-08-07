@@ -50,8 +50,10 @@ jobs:
         find . -name '*.cn.md' | xargs sed -i '1d' 
         find . -name '*.cn.md' | xargs sed -i -n '/+++/,$ p' 
         find . -name '*.cn.md' | xargs sed -i '1d' 
-        echo install svg and generate
+        echo install svg
+        sudo rm -rf /usr/local/lib/node_modules/svgexport
         npm install svgexport -g  --ignore-scripts
+        echo gitbook generate
         gitbook pdf
         cd ..
         rm -rf *.pdf
