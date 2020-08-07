@@ -29,6 +29,10 @@ jobs:
         sudo npm -g install gitbook-cli
     - name: Run Build gitbook
       run: |
+        echo config user kimmking
+        git config --global user.email "kimmking@163.com"
+        git config --global user.name "kimmking"
+        export TZ="Asia/Shanghai"
         git clone https://github.com/apache/shardingsphere
         ls -al shardingsphere/docs/document/content/
         cp -rf shardingsphere/docs/document/content/* md 
@@ -38,7 +42,11 @@ jobs:
         find . -name '*.cn.md' | xargs sed -i '1d' 
         find . -name '*.cn.md' | xargs sed -i -n '/+++/,$ p' 
         find . -name '*.cn.md' | xargs sed -i '1d' 
-        gitbook help
         gitbook pdf
         ls -al
+        echo git commit&push
+        git add .
+        dateStr=`date "+%Y-%m-%d %H:%M:%S %Z"`
+        git commit -m  "Update shardingsphere documents at $dateStr."
+        git push
  
