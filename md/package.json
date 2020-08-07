@@ -1,0 +1,12 @@
+{
+  "name": "shardingsphere documents",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimmking/shardingsphere-document.git"
+  },
+  "author": "KimmKing <kimmking@163.com>",
+  "dependencies": {
+  }
+}
