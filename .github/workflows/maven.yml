@@ -29,6 +29,14 @@ jobs:
         sudo npm -g install gitbook-cli
     - name: Run Build gitbook
       run: |
-        cat .github/scripts/clean-md.sh
-        sh .github/scripts/clean-md.sh
+        git clone https://github.com/apache/shardingsphere
+        ls -al shardingsphere/docs/document/content/
+        cp -rf shardingsphere/docs/document/content/* md 
+        rm -rf shardingsphere
+        cd md
+        find . -name '*.en.md' | xargs rm -rf 
+        find . -name '*.cn.md' | xargs sed -i '1d' 
+        find . -name '*.cn.md' | xargs sed -i -n '/+++/,$ p' 
+        find . -name '*.cn.md' | xargs sed -i '1d' 
+        gitbook pdf
  
