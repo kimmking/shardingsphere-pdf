@@ -1,7 +1,7 @@
 # 目 录
 
 
-  * [1. 概览](overview.cn.md)
+  * [1. 概览](overview/_index.cn.md)
   * [2. 快速入门](quick-start/_index.cn.md)
     * [2.1. ShardingSphere-JDBC](quick-start/shardingsphere-jdbc-quick-start.cn.md)
     * [2.2. ShardingSphere-Proxy](quick-start/shardingsphere-proxy-quick-start.cn.md)
@@ -158,5 +158,5 @@
     * [5.8. 分布式治理](dev-manual/governance.cn.md)
     * [5.9. 弹性伸缩](dev-manual/scaling.cn.md)
     * [5.10. Proxy](dev-manual/proxy.cn.md)
-  * [6. 下载](downloads.cn.md)
-  * [7. FAQ](faq.cn.md)
+  * [6. 下载](downloads/_index.cn.md)
+  * [7. FAQ](faq/_index.cn.md)
