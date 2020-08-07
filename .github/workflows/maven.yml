@@ -28,6 +28,8 @@ jobs:
       run: |
         node -v
         npm -v
+        pwd
+        ls -al
         sudo npm -g install gitbook-cli
         sh clean-md.sh
  
