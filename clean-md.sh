@@ -1,5 +1,5 @@
 git clone https://github.com/apache/shardingsphere
-cp -rf shardingsphere/docs/document/content/* ./
+cp -rf shardingsphere/docs/document/content/* .
 rm -rf shardingsphere
 
 find . -name '*.en.md' | xargs rm -rf 

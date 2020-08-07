@@ -27,5 +27,7 @@ jobs:
         pwd
         ls -al
         sudo npm -g install gitbook-cli
+    - name: Run Build gitbook
+      run: |
         sh clean-md.sh
  
