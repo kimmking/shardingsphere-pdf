@@ -38,5 +38,7 @@ jobs:
         find . -name '*.cn.md' | xargs sed -i '1d' 
         find . -name '*.cn.md' | xargs sed -i -n '/+++/,$ p' 
         find . -name '*.cn.md' | xargs sed -i '1d' 
+        gitbook help
         gitbook pdf
+        ls -al
  
