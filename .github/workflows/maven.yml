@@ -29,6 +29,6 @@ jobs:
         sudo npm -g install gitbook-cli
     - name: Run Build gitbook
       run: |
-        cat clean-md.sh
-        sh clean-md.sh
+        cat .github/scripts/clean-md.sh
+        sh .github/scripts/clean-md.sh
  

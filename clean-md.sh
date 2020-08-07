@@ -1,6 +1,6 @@
 git clone https://github.com/apache/shardingsphere
 ll shardingsphere/docs/document/content/
-cp -rf shardingsphere/docs/document/content/* md 
+cp -fr shardingsphere/docs/document/content/*  md  
 rm -rf shardingsphere
 
 
