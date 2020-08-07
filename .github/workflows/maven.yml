@@ -33,6 +33,14 @@ jobs:
         git config --global user.email "kimmking@163.com"
         git config --global user.name "kimmking"
         export TZ="Asia/Shanghai"
+        echo clean origin md files
+        rm -rf md/dev-manual
+        rm -rf md/downloads
+        rm -rf md/faq
+        rm -rf md/features
+        rm -rf md/overview
+        rm -rf md/quick-start
+        rm -rf md/user-manual
         git clone https://github.com/apache/shardingsphere
         ls -al shardingsphere/docs/document/content/
         cp -rf shardingsphere/docs/document/content/* md 
@@ -44,7 +52,7 @@ jobs:
         find . -name '*.cn.md' | xargs sed -i '1d' 
         gitbook pdf
         ls -al
-        echo git commit&push
+        echo git commit and push
         git add .
         dateStr=`date "+%Y-%m-%d %H:%M:%S %Z"`
         git commit -m  "Update shardingsphere documents at $dateStr."
