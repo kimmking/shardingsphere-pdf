@@ -50,10 +50,11 @@ jobs:
         find . -name '*.cn.md' | xargs sed -i '1d' 
         find . -name '*.cn.md' | xargs sed -i -n '/+++/,$ p' 
         find . -name '*.cn.md' | xargs sed -i '1d' 
+        tree
         gitbook pdf
         cd ..
         rm -rf *.pdf
-        mv md/book.pdf shardingsphere-`date "+%Y-%m-%d"`.pdf
+        mv md/book.pdf Apache-ShardingSphere.pdf
         echo git commit and push
         git add .
         dateStr=`date "+%Y-%m-%d %H:%M:%S %Z"`
