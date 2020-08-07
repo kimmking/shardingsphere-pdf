@@ -54,6 +54,8 @@ jobs:
         echo sudo rm -rf /usr/local/lib/node_modules/svgexport
         echo npm uninstall svgexport -g
         echo npm install --unsafe-perm --ignore-scripts -g svgexport
+        npm install -g cnpm
+        cnpm install -g svgexport
         echo gitbook generate
         gitbook pdf
         cd ..
